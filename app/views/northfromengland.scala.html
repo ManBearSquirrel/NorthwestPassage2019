@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Northwest Passage</title>
+    </head>
+    <body>
+        <h1>Where am I? What am I doing here?</h1>
+        <p>So much ice. So much cold. Maybe I should sample David Bowie to make a song about it.</p>
+        <form action="/home" method="POST">
+            @helper.CSRF.formField
+            <input type="submit" value="Sail back South"/>
+        </form>
+        <form action="/northEnd" method="POST">
+            @helper.CSRF.formField
+            <input type="submit" value="Keep going North into the unknown"/>
+        </form>
+    </body>
+</html>

@@ -4,10 +4,12 @@
 
 GET     /                           controllers.GameController.getWelcome
 GET     /kittens                    controllers.GameController.getKittens
-POST    /start                      controllers.GameController.postStart
+POST    /start                      controllers.GameController.postStart(request : Request)
+POST    /restart                    controllers.GameController.postRestart
 POST    /westFromEngland            controllers.GameController.postWestFromEngland
-POST    /northEnd                   controllers.GameController.postNorthEnd
-POST    /eastFromEngland            controllers.GameController.postEastFromEngland
+POST    /northFromEngland           controllers.GameController.postNorthFromEngland
+POST    /northEnd                   controllers.GameController.postNorthEnd(request : Request)
+POST    /eastFromEngland            controllers.GameController.postEastFromEngland(request : Request)
 POST    /eastEnd                    controllers.GameController.postEastEnd
 POST    /westEnd                    controllers.GameController.postWestEnd
 POST    /home                       controllers.GameController.postHomePort

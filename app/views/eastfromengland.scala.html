@@ -1,3 +1,4 @@
+@(crewCount : String)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
 <p>This way is not looking very promising.
     You keep going in and out of bays trying to find a way east but you always run into land.
     You are afraid you may run aground and be eaten by one of the roving bands of feral kittens you see frolicking upon the shore.
+    One of your crew was injured. You have @crewCount able bodied sailors remaining.
 </p>
 <form action="/home" method="POST">
     @helper.CSRF.formField

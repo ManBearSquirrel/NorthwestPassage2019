@@ -12,6 +12,8 @@
 </p>
 <form action="/start" method="POST">
     @helper.CSRF.formField
+    <label for="playerName">Enter your name</label>
+    <input type="text" name="playerName" id="playerName" required="true">
     <input type="submit" value="Let's Do This!"/>
 </form>
 <form action="/kittens" method="GET">

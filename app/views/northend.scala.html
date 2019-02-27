@@ -1,18 +1,26 @@
+@(playerName : String)
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Northwest Passage</title>
-</head>
-<body>
-<h1>Too Much Ice</h1>
-<p>You should have known if it was that easy someone would have done it already.
-    Your ship is hit by an iceberg.
-    You and your crew fall into the sea and are attacked by giant coelacanths.
-    Lucky for you a passing catfish chases away the coelacanths.
-    You are all able to swim to the shore of a frozen island where you find nothing to eat but lettuce.
-    Years later you are rescued by a ship named Titanic on its way to the New World.
-    The end.
-</p>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Northwest Passage</title>
+    </head>
+    <body>
+        <h1>Too Much Ice</h1>
+        <p>You should have known if it was that easy someone would have done it already.
+            Your ship is hit by an iceberg.
+            You and your crew fall into the sea and are attacked by giant coelacanths.
+            Lucky for you a passing catfish chases away the coelacanths.
+            You are all able to swim to the shore of a frozen island where you find nothing to eat but lettuce.
+            Years later you are rescued by a ship named Titanic on its way to the New World.
+            The end for @playerName.
+        </p>
+        <form action="/">
+            <input type="submit" value = "New Player">
+        </form>
+        <form method="post" action="/restart">
+            @helper.CSRF.formField
+            <input type="submit" value = "Play Again">
+        </form>
+    </body>
 </html>
